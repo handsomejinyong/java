@@ -1,0 +1,26 @@
+package javasealsup;
+import java.util.*;
+
+public class car {
+
+	
+	
+	public static void main(String args[]) {
+		int num;
+		Scanner a = new Scanner(System.in);
+		System.out.print("입력하시오: ");
+		num=a.nextInt();
+		int count=0;
+		int fivehap=0;
+		for(int i=5; i<=num; i+=5)
+		{
+			count++;
+			fivehap=fivehap+i;
+		}
+
+		System.out.println("정수 입력 값:"+num);
+		System.out.println("5의 배수의 개수: "+count);
+		System.out.print("5의 배수의 합: "+fivehap);
+	}
+
+}
