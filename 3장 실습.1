@@ -1,0 +1,27 @@
+package javasealsup;
+import java.util.*;
+
+public class car {
+
+	
+	
+	public static void main(String args[]) {
+		int num;		
+		int num2=0;
+		Scanner a= new Scanner(System.in);
+		System.out.println("숫자 입력");
+		num=a.nextInt();  //1234
+		
+		while(num>0)
+		{
+			num2=num2*10;
+			num2=num2+(num%10);
+			num=num/10;
+			 
+
+		}
+		System.out.print("바뀐 숫자:" +num2);
+		
+	}
+
+}
