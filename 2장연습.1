@@ -1,0 +1,23 @@
+package 연습1;
+import java.io.*;
+public class 연습1 {
+
+	public static void main(String[] args)throws IOException {
+		
+		String name; //이름
+		int number;  //학번
+		int tople;	 //토플 점수
+		BufferedReader a= new BufferedReader(new InputStreamReader(System.in));
+		System.out.print("이름, 학번, 토플점수를 입력하세요 : ");
+		name = a.readLine();
+		number=Integer.parseInt(a.readLine());
+		tople=Integer.parseInt(a.readLine());
+		//입력 메소드로 각 변수에 저장
+		
+		System.out.println("나의 이름은"+name+"입니다.");
+		System.out.println("학번은"+number+"입니다.");
+		System.out.println("그리고 토플점수는 "+tople+"점 입니다.");
+		//각 결과 출력
+	}
+
+}
