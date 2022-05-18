@@ -1,0 +1,30 @@
+package yeje;
+import java.awt.Point;
+
+class yeje {
+	int x1=0; int y1=0;
+	int x2=0; int y2=0;
+	
+	void buildRect(int a, int b, int c, int d) {
+		x1=a; y1=b;
+		x2=c; y2=d;
+		System.out.println("사각형면적:"+(x2-x1)*(y2-y1));
+	}
+	void buildRect(Point topLeft, Point bottomRight) {
+		x1=topLeft.x; y1=topLeft.y;
+		x2=bottomRight.x; y2=bottomRight.y;
+		System.out.println("사각형면적: "+(x2-x1)*(y2-y1));
+	}
+	void buildRect(Point topLeft,int w, int h) {
+		x1=topLeft.x; y1=topLeft.y;
+		x2=(x1+w); y2=(y1+h);
+		System.out.println("사각형면적: "+(x2-x1)*(y2-y1));
+	}
+	public static void main(String[]args) {
+	yeje a= new yeje();
+	a.buildRect(10,10,50,50);
+	a.buildRect(new Point(10,10),new Point(50,50));
+	a.buildRect(new Point(10,10),50,50);
+		
+	}
+}
