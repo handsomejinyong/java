@@ -1,0 +1,89 @@
+import java.util.*; 
+class Add{
+	 int a;
+	 int b;
+	 public void setValue(int a, int b) { //연산 대상 설정 메소드
+		 this.a=a;//전달받은 값 Add클래스의 변수 a에 저장
+		 this.b=b;//전달받은 값 Add클래스의 변수 b에 저장
+	 }
+	 public int calculate() { //연산 한 값 반환 메소드
+		 return a+b;
+	 }
+ 	}
+ class Sub{
+	 int a;
+	 int b;
+	 public void setValue(int a, int b) { //연산 대상 설정 메소드
+		 this.a=a;//전달받은 값 Sub클래스의 변수 a에 저장
+		 this.b=b;//전달받은 값 Sub클래스의 변수 b에 저장
+	 }
+	 public int calculate() { //연산 한 값 반환 메소드
+		 return a-b;
+ 	}
+ }
+ class Mul{
+	 int a;
+	 int b;
+	 public void setValue(int a, int b) {//연산 대상 설정 메소드
+		 this.a=a;//전달받은 값 Mul클래스의 변수 a에 저장
+		 this.b=b;//전달받은 값 Mul클래스의 변수 b에 저장
+	 }
+	 public int calculate() { //연산 한 값 반환 메소드
+		 return a*b;
+ 	}
+ }
+ class Div{
+	 int a;
+	 int b;
+	 public void setValue(int a, int b) { //연산 대상 설정 메소드
+		 this.a=a;//전달받은 값 Div클래스의 변수 a에 저장
+		 this.b=b;//전달받은 값 Div클래스의 변수 b에 저장
+	 }
+	 public int calculate() { //연산 한 값 반환 메소드
+		 return a/b;
+ 	}
+ }
+public class plusmm {
+
+	public static void main(String[] args) {
+		Scanner num= new Scanner(System.in);
+		
+		int num1, num2;// 숫자 입력할 변수 선언
+		char op;	//연산 기호 입력할 변수 선언
+		
+		System.out.print("두 정수와 연산자를 입력하시오 >> ");
+		num1= num.nextInt();//숫자 입력
+		num2=num.nextInt(); //숫자 입력
+		op=num.next().charAt(0); //연산자를 문자로 변환 scan변수가 받은 0번째 인덱스를 문자로 변환.
+		
+		switch(op) {
+		case '+':
+			Add add=new Add(); //Add 클래스 객체 생성
+			add.setValue(num1,num2); //Add 클래스로 변수값을 넘긴다.
+			System.out.println(add.calculate());//계산 값 출력
+			break;
+			
+		case '-':
+			Sub sub= new Sub();//Sub  클래스 객체 생성
+			sub.setValue(num1,num2); //Sub 클래스로 변수값을 넘긴다.
+			System.out.println(sub.calculate());//계산 값 출력
+			break;
+			
+		case '*':
+			Mul mul=new Mul();//Mul 클래스 객체 생성
+			mul.setValue(num1,num2); //Mul 클래스로 변수값을 넘긴다.
+			System.out.println(mul.calculate());//계산 값 출력
+			break;
+			
+		case '/':
+			Div div=new Div();//Div 클래스 객체 생성
+			div.setValue(num1,num2); //Div 클래스로 변수값을 넘긴다.
+			System.out.println(div.calculate());//계산 값 출력
+			break;
+			
+		default: System.out.println("error"); //다른 연산자 사용시 오류 출력
+		}
+	}
+
+}
+ 
