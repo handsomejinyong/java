@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.StringTokenizer;
+public class Ex4_3 {
+
+	public static void main(String[] args) {
+		int tokencnt=0;
+		System.out.println("** 입력없이 엔터키를 치면 종료 **");
+		BufferedReader inbr = new BufferedReader(new InputStreamReader(System.in));
+		
+		do {
+			System.out.println("문자열 입력 : ");
+			try {
+				String instr = inbr.readLine();
+				StringTokenizer str = new StringTokenizer(instr);
+				tokencnt = str.countTokens();
+				System.out.println("파싱할 문자열의 수는 총 "+tokencnt);
+				
+				while(str.hasMoreTokens()) {
+					System.out.println("  ["+(str.nextToken())+"]");
+				}
+			}catch(IOException e) {
+				System.out.println(e.toString());
+			}
+			System.out.println();
+		}while(tokencnt!=0);
+	}
+
+}
