@@ -1,0 +1,16 @@
+
+public class NumberHolder {
+		public int anInt;
+		public float aFloat;
+		NumberHolder(int an, float af){
+			anInt=an;
+			aFloat=af;
+		}
+	public static void main(String[] args) {
+		NumberHolder nh = new NumberHolder(4,3.141592f);
+		System.out.println("멤버변수 anInt : "+nh.anInt);
+		System.out.println("멤버변수 aFloat : "+nh.aFloat);
+
+	}
+
+}
