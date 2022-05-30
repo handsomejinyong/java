@@ -1,0 +1,24 @@
+
+public class Cylinder extends Circle2 {
+
+	int height;
+	Cylinder(){
+		height=15;
+	}
+	Cylinder(int c){
+		height=c;
+	}
+	
+	public int volume() {
+		return area()*height;
+	}
+	public String showCylinder() {
+		return showCircle() + ", Height = "+height;
+	}
+	public static void main(String[] args) {
+		Cylinder MyCylinder = new Cylinder();
+		System.out.println("MyCylinder : " + MyCylinder.showCylinder()+ ".");
+		System.out.println("원통 부피 : " + MyCylinder.volume());
+	}
+
+}
